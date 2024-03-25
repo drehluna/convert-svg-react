@@ -31,14 +31,11 @@ class Parser {
       newWidth = height - (height - width);
     }
 
-    // Encontra o índice da primeira ocorrência de fill
     const fillIndex = svg.indexOf('fill="');
     if (fillIndex !== -1) {
-      // Divide o SVG em duas partes
       const beforeFill = svg.substring(0, fillIndex);
       const afterFill = svg.substring(fillIndex);
 
-      // Aplica a substituição apenas na segunda parte
       const modifiedAfterFill = afterFill.replace(
         /fill="[^"]*"/g,
         `fill={color}`
