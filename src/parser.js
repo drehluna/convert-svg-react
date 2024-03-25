@@ -99,7 +99,7 @@ class Parser {
     const outputPath = this.getOutputPath();
     const componentCode = this.createReactComponent();
     fs.writeFileSync(outputPath, componentCode, "utf8");
-    console.log(`Arquivo ${outputPath} criado com sucesso.`);
+    console.log(`File ${outputPath} created successfully.`);
   }
 }
 
